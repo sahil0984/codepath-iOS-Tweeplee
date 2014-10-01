@@ -80,7 +80,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             var params: [String:String] = [String:String]()
             
             params["max_id"] = max_id
-            params["since_id"] = "0"
+            //params["since_id"] = "0"
             
             TwitterClient.sharedInstance.homeTimelineWithParams(params, completion: { (tweets: [Tweet]?, error: NSError?) -> () in
                 if error != nil {
