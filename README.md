@@ -1,8 +1,8 @@
 Tweeplee (Twitter Client) <br>
 ===========================
 
-Week3 Codepath iOS project - Twitter Client
-Time spent: 18 hrs
+Week3 Codepath iOS project - Twitter Client  <br>
+Time spent: 20 hrs
 
 This client lets the user to view Twitter home timeline. The user can reply, retweet or favorite the tweets from their home timeline. User can also create a new tweet form the main screen. User can tap on any tweet and see more details about the tweet.
 
@@ -22,7 +22,7 @@ Optionals:  <br>
 <b>[DONE]</b> Optional: Retweeting and favoriting should increment the retweet and favorite count. <br>
 <b>[DONE]</b> Optional: User should be able to unretweet and unfavorite and should decrement the retweet and favorite count. <br>
 <b>[DONE]</b> Optional: Replies should be prefixed with the username and the reply_id should be set when posting the tweet, <br>
-<b>[NOT DONE]</b> Optional: User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client. <br>  <br>
+<b>[DONE]</b> Optional: User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client. <br>  <br>
 
 
 Additional features: <br>
