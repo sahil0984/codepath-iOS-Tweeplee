@@ -49,7 +49,6 @@ class TweetsTableViewCell: UITableViewCell, TTTAttributedLabelDelegate {
         didSet {
             tweetLabel.enabledTextCheckingTypes = NSTextCheckingType.Link.toRaw()
             tweetLabel.delegate = self
-            //tweetLabel.addLinkToURL(<#url: NSURL!#>, withRange: <#NSRange#>)
             
             
             nameLabel.text = tweet?.user?.name
@@ -133,6 +132,8 @@ class TweetsTableViewCell: UITableViewCell, TTTAttributedLabelDelegate {
     
     func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
         println("link clicked")
+        
+        UIApplication.sharedApplication().openURL(url)
     }
     
     func formatTimeString (unformattedString: String) -> (String) {
