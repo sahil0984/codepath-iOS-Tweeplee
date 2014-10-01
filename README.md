@@ -2,7 +2,7 @@ Tweeplee (Twitter Client) <br>
 ===========================
 
 Week3 Codepath iOS project - Twitter Client
-Time spent: 18 hrs
+Time spent: 20 hrs
 
 This client lets the user to view Twitter home timeline. The user can reply, retweet or favorite the tweets from their home timeline. User can also create a new tweet form the main screen. User can tap on any tweet and see more details about the tweet.
 
