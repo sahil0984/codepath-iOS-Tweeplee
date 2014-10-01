@@ -12,7 +12,7 @@ protocol TweetDetailsViewControllerDelegate {
     func tweetFavoriteToggled(favoriteToggledTweet : Tweet) -> Void
 }
 
-class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegate {
+class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegate, TTTAttributedLabelDelegate {
 
     @IBOutlet weak var retweetedImageView: UIImageView!
     @IBOutlet weak var retweetedLabel: UILabel!
@@ -22,7 +22,7 @@ class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegat
     @IBOutlet weak var userThumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var tweetLabel: TTTAttributedLabel!
     @IBOutlet weak var tweetImageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -33,6 +33,9 @@ class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegat
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBOutlet weak var mediaImageView: UIImageView!
+    
+    
     var currTweet: Tweet = Tweet()
     
     var delegate: TweetDetailsViewControllerDelegate?
@@ -41,6 +44,8 @@ class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tweetLabel.enabledTextCheckingTypes = NSTextCheckingType.Link.toRaw()
+        tweetLabel.delegate = self
         
         nameLabel.text = currTweet.user?.name
         usernameLabel.text = "@\((currTweet.user?.screenname)!)"
@@ -68,6 +73,10 @@ class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegat
             
             retweetedImageView.hidden = true
             retweetedLabel.hidden = true
+        }
+        
+        if currTweet.mediaUrl != nil {
+            mediaImageView.setImageWithURL(NSURL(string: (currTweet.mediaUrl)!))
         }
         
         redrawFavButton()
@@ -148,6 +157,12 @@ class TweetDetailsViewController: UIViewController, ComposeViewControllerDelegat
             let retweetOffImage = UIImage(named: "retweet") as UIImage
             retweetButton.setImage(retweetOffImage, forState: UIControlState.Normal)
         }
+    }
+    
+    func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
+        println("link clicked")
+        
+        UIApplication.sharedApplication().openURL(url)
     }
     
     /*

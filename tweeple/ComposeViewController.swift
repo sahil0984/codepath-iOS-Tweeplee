@@ -144,6 +144,8 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
             if newTweetType == 1 { //Reply
                 params["in_reply_to_status_id"] = templateTweet?.tweetIdString
                 tweetVisible = true
+            } else if newTweetType == 0 {
+                tweetVisible = true
             }
             
             if newTweetType == 2 { //Retweet

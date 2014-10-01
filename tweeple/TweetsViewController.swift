@@ -37,13 +37,16 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
-            println(error)
-            self.tweets = tweets!
-            self.tweetsTableView.reloadData()
-            
-            var lastTweet = self.tweets[self.tweets.count-1]
-            var max_id_int = ((lastTweet.tweetIdString!).toInt()! - 1)
-            self.max_id = "\(max_id_int)"
+            if error != nil {
+                println(error)
+            } else {
+                self.tweets = tweets!
+                self.tweetsTableView.reloadData()
+                
+                var lastTweet = self.tweets[self.tweets.count-1]
+                var max_id_int = ((lastTweet.tweetIdString!).toInt()! - 1)
+                self.max_id = "\(max_id_int)"
+            }
         })
         
         //Logic to implement pull to refresh on table view
@@ -112,12 +115,16 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     {
         // Code to refresh table view
         TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
-            self.tweets = tweets!
-            self.tweetsTableView.reloadData()
-            
-            var lastTweet = self.tweets[self.tweets.count-1]
-            var max_id_int = ((lastTweet.tweetIdString!).toInt()! - 1)
-            self.max_id = "\(max_id_int)"
+            if error != nil {
+                println("error: \(error)")
+            } else {
+                self.tweets = tweets!
+                self.tweetsTableView.reloadData()
+                
+                var lastTweet = self.tweets[self.tweets.count-1]
+                var max_id_int = ((lastTweet.tweetIdString!).toInt()! - 1)
+                self.max_id = "\(max_id_int)"
+            }
         })
 
         self.refreshControl.endRefreshing()

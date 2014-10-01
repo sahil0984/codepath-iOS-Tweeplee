@@ -61,9 +61,14 @@ class Tweet : NSObject {
         
         tweetIdString = dictionary["id_str"] as? String
         
-        var extendedEntities = dictionary["extended_entities"] as? NSDictionary!
-        //mediaUrl = extendedEntities["media"] as? [NSDictionary]
-        //println("Ext: \(extendedEntities[\"media\"])")
+        var extendedEntities = dictionary["extended_entities"] as? NSDictionary
+        if extendedEntities != nil {
+            var mediaEntities = extendedEntities!["media"] as? [NSDictionary]
+            mediaUrl = (mediaEntities![0])["media_url"] as? String
+            println("Ext: \(mediaUrl)")
+        } else {
+            mediaUrl = nil
+        }
 
     }
     

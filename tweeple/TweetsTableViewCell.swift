@@ -35,7 +35,10 @@ class TweetsTableViewCell: UITableViewCell, TTTAttributedLabelDelegate {
     @IBOutlet weak var replyButton: UIButton!
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var retweetCountLabel: UILabel!
+    @IBOutlet weak var favoriteCountLabel: UILabel!
     
+    @IBOutlet weak var mediaImageView: UIImageView!
     @IBOutlet weak var mediaImageHeight: NSLayoutConstraint!
     @IBOutlet weak var mediaImageMarginBot: NSLayoutConstraint!
     
@@ -95,9 +98,18 @@ class TweetsTableViewCell: UITableViewCell, TTTAttributedLabelDelegate {
                 let retweetOffImage = UIImage(named: "retweet") as UIImage
                 retweetButton.setImage(retweetOffImage, forState: UIControlState.Normal)
             }
+            
+            retweetCountLabel.text = "\((tweet?.retweetedCount)!)"
+            favoriteCountLabel.text = "\((tweet?.favoritedCount)!)"
 
-            mediaImageHeight.constant = 0
-            mediaImageMarginBot.constant = 0
+            if tweet?.mediaUrl == nil {
+                mediaImageHeight.constant = 0
+                mediaImageMarginBot.constant = 0
+            } else {
+                mediaImageHeight.constant = 30
+                mediaImageMarginBot.constant = 10
+                mediaImageView.setImageWithURL(NSURL(string: (tweet?.mediaUrl)!))
+            }
             
         }
     }
