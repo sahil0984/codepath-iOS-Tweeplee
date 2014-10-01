@@ -25,6 +25,12 @@ Optionals:  <br>
 <b>[NOT DONE]</b> Optional: User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client. <br>  <br>
 
 
+Additional features: <br>
+<b>[DONE]</b> User can preview if any image is attached with the tweet in the home timeline. <br>
+<b>[DONE]</b> User can see the full image attached with the tweet in the tweet detail screen. <br>
+<b>[DONE]</b> The links are clickable and opens up the browser. <br>
+<b>[DONE]</b> Verified status is shown with the user image and user name on both the screens. <br>
+
 Walkthrough of Tweeplee: <br> <br>
 ![Video Walkthrough](tweeplee.gif)
 
