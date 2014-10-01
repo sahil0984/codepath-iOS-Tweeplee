@@ -364,20 +364,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_blurry_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-ei-vvD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3p-W4-Sd1">
-                                <rect key="frame" x="247" y="560" width="106" height="30"/>
+                                <rect key="frame" x="225" y="510" width="149" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Login to Twitter">
+                                    <color key="titleColor" red="1" green="0.065528340127328333" blue="0.42477948386668496" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onLogin:" destination="5vN-lr-Bii" eventType="touchUpInside" id="RN9-yt-ec6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeplee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-7X-Y6i">
+                                <rect key="frame" x="232.5" y="410.5" width="135" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="99j-jw-5SP" firstAttribute="top" secondItem="P3p-W4-Sd1" secondAttribute="bottom" constant="10" id="TR0-I2-q5x"/>
+                            <constraint firstAttribute="centerX" secondItem="x0k-7X-Y6i" secondAttribute="centerX" id="75q-cq-Ehe"/>
+                            <constraint firstItem="99j-jw-5SP" firstAttribute="top" secondItem="P3p-W4-Sd1" secondAttribute="bottom" constant="50" id="TR0-I2-q5x"/>
+                            <constraint firstAttribute="bottom" secondItem="pr3-ei-vvD" secondAttribute="bottom" id="c3x-07-Bib"/>
+                            <constraint firstItem="pr3-ei-vvD" firstAttribute="leading" secondItem="yzJ-9F-ELn" secondAttribute="leading" id="euh-ys-1Qq"/>
+                            <constraint firstItem="P3p-W4-Sd1" firstAttribute="top" secondItem="x0k-7X-Y6i" secondAttribute="bottom" constant="60" id="gT9-Wr-bna"/>
+                            <constraint firstAttribute="trailing" secondItem="pr3-ei-vvD" secondAttribute="trailing" id="lwZ-kh-5xw"/>
                             <constraint firstAttribute="centerX" secondItem="P3p-W4-Sd1" secondAttribute="centerX" id="olO-ER-Tmi"/>
+                            <constraint firstItem="pr3-ei-vvD" firstAttribute="top" secondItem="eIO-vm-w8v" secondAttribute="bottom" id="yXK-jt-KYd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -655,6 +672,7 @@
     </scenes>
     <resources>
         <image name="favorite.png" width="16" height="16"/>
+        <image name="ic_blurry_background.jpg" width="1680" height="1050"/>
         <image name="reply.png" width="16" height="16"/>
         <image name="retweet.png" width="16" height="16"/>
         <image name="verified_status.png" width="16" height="16"/>

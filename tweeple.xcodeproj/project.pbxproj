@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F91574352384F82A8F79FC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FBCFE436654946A4F5DD5A /* libPods.a */; };
+		9F0AB14B19DBE04100F54189 /* ic_blurry_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AB14A19DBE04100F54189 /* ic_blurry_background.jpg */; };
 		9F75DA0819D95087008A3040 /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F75DA0719D95087008A3040 /* TweetDetailsViewController.swift */; };
 		9F9AB7F619D67E9600261EEC /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AB7F519D67E9600261EEC /* TwitterClient.swift */; };
 		9F9AB7F819D6857A00261EEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AB7F719D6857A00261EEC /* LoginViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		09A8E9A337DC4DB59BB3EFA0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9F0AB14A19DBE04100F54189 /* ic_blurry_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_blurry_background.jpg; sourceTree = "<group>"; };
 		9F75DA0719D95087008A3040 /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		9F9AB7F119D67DDA00261EEC /* tweeple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tweeple-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F9AB7F519D67E9600261EEC /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		9FD8C23C19D550140054A56E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F0AB14A19DBE04100F54189 /* ic_blurry_background.jpg */,
 				9FA3893119DB0E4000B69F6D /* favorite_on.png */,
 				9FA3892F19DB0E2E00B69F6D /* retweet_on.png */,
 				9FF1EBD519D7ACF300C79DA7 /* verified_status.png */,
@@ -286,6 +289,7 @@
 				9FD8C24919D550140054A56E /* LaunchScreen.xib in Resources */,
 				9FD8C24619D550140054A56E /* Images.xcassets in Resources */,
 				9FF1EBD619D7ACF300C79DA7 /* verified_status.png in Resources */,
+				9F0AB14B19DBE04100F54189 /* ic_blurry_background.jpg in Resources */,
 				9FD8C26519D6333B0054A56E /* favorite.png in Resources */,
 				9FA3893019DB0E2E00B69F6D /* retweet_on.png in Resources */,
 				9FF1EBD419D77FFF00C79DA7 /* reply.png in Resources */,
